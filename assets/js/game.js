@@ -1,35 +1,48 @@
-// this creates a function named "fight"//
-function fight() {
-    window.alert("The fight has begun!");
-}
-// fight();
-
 var playerName = window.prompt("what is your robot's name?");
+var playerHealth = 100;
+var playerAttack = 10;
 
-// Note the lack of quotation marks around playerName
+// you can also log multiple values at once like this
+console.log(playerName, playerAttack, playerHealth);
 
-console.log(playerName);
+var enemyName = "Roberto";
+var enemyHealth = 50;
+var enemyAttack = 12;
 
-console.log("This log is a string, good for leaving yourself a message");
+// create function
+var fight = function() {
+    // Alert players that htey are starting the round
+    window.alert("Welcome to Robot Gladiators!");
 
-// This will do math and log 20
+    // Subtract the value of 'playerAttack' from the value of 'enemyHealth' and use that result to update the value in the 'enemyHealth' variable.
 
-console.log(10 + 10);
+    // log a resulting message to the console so we know that it worked.
 
-// What is this?
+    // subtract the value of 'enemyAttack' from the value of 'playerHealth' and use that result to update the value in the 'playerHealth' variable.
 
-console.log("Our robot's name is " + playerName);
+    // log a resulting message to the console  so we know that it worked.
+};
 
-var playerName = "jasper";
+// execute function
+fight();
 
-// jasper is ready for battle!
+ // subtract the value of 'enemyAttack' from the value of 'playerHealth' and use that result to update the value in the 'playerHealth' variable.
+ enemyHealth = enemyHealth - playerAttack;
 
-console.log("jasper" + "is ready for battle!");
+ // log a resulting message to the console  so we know that it worked.
+ console.log(
+    playerName + " attacked " + enemyName + ". " + enemyName + " now has " + enemyHealth + " health remaining."
+ );
 
-// "jasper is ready for battle!"
+ // check enemy's health
+ if (enemyHealth)
 
-console.log(playerName + "is ready for battle!");
+ // Subtract the value of 'playerAttack' from the value of 'enemyHealth' and use that result to update the value in the 'enemyHealth' variable.
+ playerHealth = playerHealth - enemyAttack;
 
-// "your robot, jasper, has won!"
+  // log a resulting message to the console  so we know that it worked.
+  console.log(
+    enemyName + " attacked " + playerName + ". " + playerName + " now has " + playerHealth + " health remaining."
+  );
 
-console.log("your robot ," + playerName + ", has won!");
+  
